@@ -6,21 +6,14 @@
 //  Copyright 2009 Joshua Vickery. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CRUDItemController.h"
 
 @class Dog;
 
-@interface DogController : UIViewController {
+@interface DogController : CRUDItemController {
 	
 	IBOutlet UITextField *textField;
-	NSMutableArray *dogs;
-	Dog *dog;
 
 }
-
-@property(nonatomic, retain) NSMutableArray *dogs;
-@property(nonatomic, retain) Dog *dog;
-
-+ (DogController *)dogController;
 
 @end

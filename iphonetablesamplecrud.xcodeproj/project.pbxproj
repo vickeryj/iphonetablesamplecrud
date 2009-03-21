@@ -12,6 +12,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		352F762B0F747AD800BBEC81 /* CRUDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352F762A0F747AD800BBEC81 /* CRUDTableViewController.m */; };
+		352F76300F74829500BBEC81 /* CRUDItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352F762F0F74829500BBEC81 /* CRUDItemController.m */; };
 		3584E4C20F379E29008E596B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E4BD0F379E29008E596B /* RootViewController.m */; };
 		3584E4C30F379E29008E596B /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E4BF0F379E29008E596B /* Dog.m */; };
 		3584E4C40F379E29008E596B /* DogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3584E4C10F379E29008E596B /* DogController.m */; };
@@ -29,6 +31,10 @@
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* iphonetablesamplecrud_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iphonetablesamplecrud_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		352F76290F747AD800BBEC81 /* CRUDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRUDTableViewController.h; sourceTree = "<group>"; };
+		352F762A0F747AD800BBEC81 /* CRUDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRUDTableViewController.m; sourceTree = "<group>"; };
+		352F762E0F74829500BBEC81 /* CRUDItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRUDItemController.h; sourceTree = "<group>"; };
+		352F762F0F74829500BBEC81 /* CRUDItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRUDItemController.m; sourceTree = "<group>"; };
 		3584E4BC0F379E29008E596B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		3584E4BD0F379E29008E596B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		3584E4BE0F379E29008E596B /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
@@ -58,12 +64,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3584E4BC0F379E29008E596B /* RootViewController.h */,
-				3584E4BD0F379E29008E596B /* RootViewController.m */,
-				3584E4BE0F379E29008E596B /* Dog.h */,
-				3584E4BF0F379E29008E596B /* Dog.m */,
-				3584E4C00F379E29008E596B /* DogController.h */,
-				3584E4C10F379E29008E596B /* DogController.m */,
+				352F76270F747A1600BBEC81 /* Controllers */,
+				352F76280F747A1E00BBEC81 /* Models */,
 				1D3623240D0F684500981E51 /* iphonetablesamplecrudAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iphonetablesamplecrudAppDelegate.m */,
 			);
@@ -118,6 +120,30 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		352F76270F747A1600BBEC81 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				352F762E0F74829500BBEC81 /* CRUDItemController.h */,
+				352F762F0F74829500BBEC81 /* CRUDItemController.m */,
+				352F76290F747AD800BBEC81 /* CRUDTableViewController.h */,
+				352F762A0F747AD800BBEC81 /* CRUDTableViewController.m */,
+				3584E4C00F379E29008E596B /* DogController.h */,
+				3584E4C10F379E29008E596B /* DogController.m */,
+				3584E4BC0F379E29008E596B /* RootViewController.h */,
+				3584E4BD0F379E29008E596B /* RootViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		352F76280F747A1E00BBEC81 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3584E4BE0F379E29008E596B /* Dog.h */,
+				3584E4BF0F379E29008E596B /* Dog.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +213,8 @@
 				3584E4C20F379E29008E596B /* RootViewController.m in Sources */,
 				3584E4C30F379E29008E596B /* Dog.m in Sources */,
 				3584E4C40F379E29008E596B /* DogController.m in Sources */,
+				352F762B0F747AD800BBEC81 /* CRUDTableViewController.m in Sources */,
+				352F76300F74829500BBEC81 /* CRUDItemController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

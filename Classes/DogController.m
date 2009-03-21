@@ -11,23 +11,17 @@
 
 @implementation DogController
 
-@synthesize dogs, dog;
-
 + (DogController *)dogController {
 	return [[[DogController alloc] initWithNibName:@"DogView" bundle:nil] autorelease];
 }
 
-- (void) cancel {
-	[self.navigationController popViewControllerAnimated:YES];
-}
-
 - (void) save {
-	if (nil == dog) {
-		self.dog = [[[Dog alloc] init] autorelease];
-		[dogs addObject:dog];
+	if (nil == managedObject) {
+		self.managedObject = [[[Dog alloc] init] autorelease];
+		[parentObjects addObject:managedObject];
 	}
 	
-	dog.name = textField.text;
+	[managedObject setName:textField.text];
 
 	[self.navigationController popViewControllerAnimated:YES];
 }
@@ -35,10 +29,6 @@
 #pragma mark UIViewController methods
 
 - (void)viewDidLoad {
-	self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] 
-											  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
-											  target:self 
-											  action:@selector(cancel)] autorelease];
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] 
 											  initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
 											  target:self 
@@ -47,19 +37,12 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	textField.text = [dog name];
+	textField.text = [managedObject name];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	[textField becomeFirstResponder];
-	textField.text = [dog name];
-}
-
-#pragma mark cleanup
-- (void)dealloc {
-	[dogs release];
-	[dog release];
-	[super dealloc];
+	textField.text = [managedObject name];
 }
 
 @end

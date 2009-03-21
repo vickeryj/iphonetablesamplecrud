@@ -6,14 +6,10 @@
 //  Copyright Joshua Vickery 2009. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CRUDTableViewController.h"
 
-@interface RootViewController : UITableViewController {
-	NSMutableArray *dogs;
+@interface RootViewController : CRUDTableViewController {
+
 }
-
-- (IBAction) addButtonPressed:(id)sender;
-
-@property(nonatomic, retain) NSMutableArray *dogs;
 
 @end
