@@ -12,9 +12,13 @@
 @interface CRUDItemController : UIViewController {
 	NSMutableArray *parentObjects;
 	id managedObject;
+	IBOutlet UITextField *textField;
 }
 
 @property(nonatomic, retain) NSMutableArray *parentObjects;
 @property(nonatomic, retain) id managedObject;
+
+- (void) save;
+- (id) managedObject;
 
 @end

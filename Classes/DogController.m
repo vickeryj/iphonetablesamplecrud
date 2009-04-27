@@ -15,34 +15,16 @@
 	return [[[DogController alloc] initWithNibName:@"DogView" bundle:nil] autorelease];
 }
 
-- (void) save {
-	if (nil == managedObject) {
-		self.managedObject = [[[Dog alloc] init] autorelease];
-		[parentObjects addObject:managedObject];
-	}
-	
-	[managedObject setName:textField.text];
-
-	[self.navigationController popViewControllerAnimated:YES];
+- (id) managedObject {
+	return [[[Dog alloc] init] autorelease];
 }
+	
 
 #pragma mark UIViewController methods
 
 - (void)viewDidLoad {
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] 
-											  initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
-											  target:self 
-											  action:@selector(save)] autorelease];
+	[super viewDidLoad];
 	self.navigationItem.title = @"Dog";
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-	textField.text = [managedObject name];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-	[textField becomeFirstResponder];
-	textField.text = [managedObject name];
 }
 
 @end

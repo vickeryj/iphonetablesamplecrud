@@ -11,9 +11,9 @@
 @class Dog;
 
 @interface DogController : CRUDItemController {
-	
-	IBOutlet UITextField *textField;
 
 }
+
++ (DogController *)dogController;
 
 @end

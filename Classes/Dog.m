@@ -13,6 +13,10 @@
 
 @synthesize dogId, name;
 
+- (NSString *) description {
+	return name;
+}
+
 #pragma mark cleanup
 - (void) dealloc
 {
