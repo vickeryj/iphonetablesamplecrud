@@ -11,7 +11,7 @@
 
 @implementation CRUDItemController
 
-@synthesize parentObjects, managedObject, mySaveButton;
+@synthesize parentObjects, managedObject;
 
 - (void) save {
 	if (nil == managedObject) {
@@ -36,7 +36,6 @@
 											   initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
 											   target:self 
 											   action:@selector(save)] autorelease];
-	self.mySaveButton = self.navigationItem.rightBarButtonItem;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -47,7 +46,6 @@
 - (void)dealloc {
 	[managedObject release];
 	[parentObjects release];
-	[mySaveButton release];
     [super dealloc];
 }
 

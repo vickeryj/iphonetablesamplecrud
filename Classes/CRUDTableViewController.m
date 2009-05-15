@@ -14,7 +14,7 @@
 
 @synthesize managedObjects;
 
-+ (CRUDItemController *)crudItemController {
+- (CRUDItemController *)crudItemController {
 	return [[[CRUDItemController alloc] init] autorelease];
 }
 
@@ -56,7 +56,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	CRUDItemController *crudItemController = [[self class] crudItemController];
+	CRUDItemController *crudItemController = [self crudItemController];
 	crudItemController.parentObjects = managedObjects;
 	crudItemController.managedObject = [managedObjects objectAtIndex:indexPath.row];
 	[self.navigationController pushViewController:crudItemController animated:YES];
