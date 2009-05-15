@@ -13,10 +13,12 @@
 	NSMutableArray *parentObjects;
 	id managedObject;
 	IBOutlet UITextField *textField;
+	UIBarButtonItem *mySaveButton;
 }
 
 @property(nonatomic, retain) NSMutableArray *parentObjects;
 @property(nonatomic, retain) id managedObject;
+@property(nonatomic,retain)	UIBarButtonItem *mySaveButton;
 
 - (void) save;
 - (id) managedObject;

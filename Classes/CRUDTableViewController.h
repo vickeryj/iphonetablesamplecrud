@@ -15,7 +15,7 @@
 }
 
 - (IBAction) addButtonPressed:(id)sender;
-- (CRUDItemController *)crudItemController;
++ (CRUDItemController *)crudItemController;
 
 @property(nonatomic, retain) NSMutableArray *managedObjects;
 
