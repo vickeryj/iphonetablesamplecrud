@@ -49,7 +49,7 @@
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	cell.text = [[managedObjects objectAtIndex:indexPath.row] name];
+	cell.textLabel.text = [[managedObjects objectAtIndex:indexPath.row] name];
 	
     return cell;
 }
